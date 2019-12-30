@@ -8,7 +8,7 @@ Vue.config.productionTip = false
 // var componente1 = Vue.extend({
 //   template: '<h1>Hola - Introduction a componentes</h1>'
 // })
-
+/*
 var componente2 = Vue.extend({
   template: '<h3> {{ subtitulo }}</h3>',
   data(){
@@ -50,8 +50,10 @@ Vue.component('componente-lista', componente3)
 
 Vue.component('framework', {
   template: '<li><slot></slot></li>'
-})
+})*/
 
 new Vue({
-  el: '#app'  
+  el: '#app', 
+  components: { App },
+  template:'<App/>'
 })
