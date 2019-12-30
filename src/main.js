@@ -10,7 +10,12 @@ Vue.config.productionTip = false
 // })
 
 var componente2 = Vue.extend({
-  template: '<h3>Listado de Framworks JS</h3>'
+  template: '<h3> {{ subtitulo }}</h3>',
+  data(){
+    return {
+      subtitulo: 'Listado de Framworks JS'
+    }
+  }
 })
 
 var componente3 = Vue.extend({
@@ -18,6 +23,11 @@ var componente3 = Vue.extend({
 })
 
 Vue.component('componente-saludo', {
+  data(){
+    return {
+      titulo: 'Hola - Introduccion a componentes'
+    }
+  },
   methods: {
     display(){
       console.log('Hola Mundo');
