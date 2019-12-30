@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
-    <post-example/>
-  </div>
+  <post-example/>
 </template>
 
 <script>
