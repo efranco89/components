@@ -1,13 +1,21 @@
 <template>
-  <post-example/>
+  <div class="container">
+    <app-header/>
+    <post-example/>
+    <app-footer/>
+  </div>
 </template>
 
 <script>
-  import PostExample from './components/Posts'
+  import AppHeader from './components/Header';
+  import PostExample from './components/Posts';
+  import AppFooter from './components/Footer';
   export default {
     name: 'App',
     components:{
-      PostExample
+      AppHeader,
+      PostExample,
+      AppFooter
     }
   }
 </script>
