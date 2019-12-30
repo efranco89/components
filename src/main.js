@@ -19,7 +19,16 @@ var componente2 = Vue.extend({
 })
 
 var componente3 = Vue.extend({
-  template: '<ul><li>VueJS</li><li>Angular</li><li>React</li></ul>'
+  template: '<div><ul><framework v-for="framework in frameworks" :key="framework.id"> {{ framework.titulo }} </framework></ul></div>',
+  data(){
+    return {
+      frameworks: [
+        { id: 1, titulo: 'VueJS' },
+        { id: 2, titulo: 'Angular' },
+        { id: 3, titulo: 'React'}
+      ]
+    }
+  }
 })
 
 Vue.component('componente-saludo', {
@@ -38,6 +47,10 @@ Vue.component('componente-saludo', {
 Vue.component('componente-titulo', componente2)
 
 Vue.component('componente-lista', componente3)
+
+Vue.component('framework', {
+  template: '<li><slot></slot></li>'
+})
 
 new Vue({
   el: '#app'  
